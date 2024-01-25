@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "lenscook-test1",
+  "private_key_id": "22db3f4b1042d4b36a8ec74956a6e08ee6dd659a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC/YWJbXXlFz4tS\nIvEmOQvKnm5PQURQXPD6yqO/gWnS6AFZuCuFEj+BxbBEqI6Dhl6Jl43T+cW8QYWP\n/P7pzDR4fvWJo9RzSj0o4ijE93fAWS/7Vcqr4SF/iU6jrbZNWrR1G9sQnW86LsUh\ngdwMzvZPCa8XiiEfvH1ZXLU0txePe+ckgUCdcGIDSWQWMN2zN5T6tGBbT/aZxwq6\nvLX1LVL/c3rgSdAQ78VSRkTFH5aCcKCmlcSs3Gn32+S77uvjgoqyYxzEr8PZmMCs\nYZkFHKPQZuJZpgPQmSYD5wV5v/Jc1xemMXT/KWDkUIhY1sc/T1SsDuTieW7oIm8h\nVR9xJM4JAgMBAAECggEAUrheEg2yCGmv133A6/uGTDr0hQ853t59TnleE711JzMe\nuk/vh6IejxIKoXKVvuXKYQB/zhrMzBUqDNWWvSmFmHuP18FXZ8mz68LtSk2Iljw2\nkBVB987kcsK/meHQxViqXV//7QuPcv+aN2Rw35xpPDp8Utlifdwz9fcrX7Cv31U3\nDj8M2OZqK2NFz/1ija59e5hljxVR6llXdpFu0oJHSUdSW+AlShtVwOeaMpputieg\n0wGUWXSenONIgo6c5LOyRf/GeWMQ0eYA9ZL5TEHLouayJbNDgy4LTVa5CWb0V98s\n7lOtpE+S8hiZXu+VP6O5B9DxSWEEdFzmMbbiU/pKDQKBgQD56nkp29hVZzbBCcUn\n8pFl6JNUx/0SNqV2Vq7g9M8Z6Y7ALeioBHArXBQmtxPbf2xHF+JKqzqxrAXD8w49\nfN0dYQjxkyi5tDfAeH9GNMRxjCdgDOHQDM9ujkVHpfD576ZB7yX7jidOXlRtQ12K\n15cveB/8dyC+cAxPlUPyrZT2XwKBgQDEChsTUD7eUDNXVN8AzDwOpOe6q0q2oBFE\n3QBYRypcFP5H8r9sVR3dNxk6S2vrvFVFJ4unq+5fsJgqJhZgfMhEHpI0b+qOgcA6\nbxQ/LHYFPISnLXUbD9Kowuje7g/cUnHVPZPrh1G75QjKOzIcUhfhbVtITWTfhd/J\nLlckMFIElwKBgEWyW2oOEq32o/F/7QjwABagnv4E7BH5RXnUQN8hxuQeG56C7yB0\nZGfjPQdzBUmwppzJD2XtjOfh5pW4Ih+JxAyedCUS+keX9/hoYm5M5wAXqx+BWDRy\nbiMR8EZEBAlgCUjYDgqyoUmcywTRxbOj3ljxslHxUyNpEjXbleCHAkUXAoGALRZp\n7cI6A2WMuVxCwes3MOMKjOtSjrg34I+3wZX0jyMg7KlPD3pwGO3QNpEcLCavse0L\neK/ZblauWJtT8DMi2E/zrm3DE62R6Z6cmH8AUen+VHjnAydbewcBCizUpwarObEk\n8Tm5Oa7Om7yLpOnYpjdBlFqAhcxDkQDAeAlJA9cCgYEAz+LQVxw9Oy3sSNbPpad+\nbfHMM7HcKMka6B+nVRBCTumo4h3CT6WuM/3WWqLjdNUEYnTpOC1LnFLOqgJXbSHo\nubpsGI3CDd7sz1S4Btlx6KGgoSAj9K8SsOY+C5lsPoO8ndrsG5KS1hp/eYwWRW6s\nCSbv6q/FRpwYaYbi7BVJSEc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "lenscookvisionservice@lenscook-test1.iam.gserviceaccount.com",
+  "client_id": "107753629002436258842",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/lenscookvisionservice%40lenscook-test1.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
