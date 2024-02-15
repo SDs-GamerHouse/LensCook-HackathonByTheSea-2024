@@ -12,9 +12,10 @@ MODEL_ID = 'food-item-recognition'
 MODEL_VERSION_ID = '1d5fd481e0cf4826aa72ec3ff049e044'
 
 
-with open("backend/ingredients.jpg", "rb") as image_file:
-    encoded_string = base64.b64encode(image_file.read())
-IMAGE_URL = encoded_string
+with open("uploads/ouiouibaguette.png", "rb") as image_file:
+    imgb64 = image_file.read()
+
+print(imgb64)
 
 
 channel = ClarifaiChannel.get_grpc_channel()
@@ -32,7 +33,7 @@ post_model_outputs_response = stub.PostModelOutputs(
         inputs=[
             resources_pb2.Input(
                 data=resources_pb2.Data(
-                    image= resources_pb2.Image(base64=IMAGE_URL)
+                    image= resources_pb2.Image(base64=imgb64)
                 )
             )
         ]
