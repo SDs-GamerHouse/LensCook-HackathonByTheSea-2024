@@ -12,45 +12,42 @@ MODEL_ID = 'food-item-recognition'
 MODEL_VERSION_ID = '1d5fd481e0cf4826aa72ec3ff049e044'
 
 
-with open("uploads/ouiouibaguette.png", "rb") as image_file:
-    imgb64 = image_file.read()
+def find_ingredients1(path):
+    with open(path, "rb") as image_file:
+        img = image_file.read()
 
-print(imgb64)
+    channel = ClarifaiChannel.get_grpc_channel()
+    stub = service_pb2_grpc.V2Stub(channel)
 
+    metadata = (('authorization', 'Key ' + PAT),)
 
-channel = ClarifaiChannel.get_grpc_channel()
-stub = service_pb2_grpc.V2Stub(channel)
+    userDataObject = resources_pb2.UserAppIDSet(user_id=USER_ID, app_id=APP_ID)
 
-metadata = (('authorization', 'Key ' + PAT),)
-
-userDataObject = resources_pb2.UserAppIDSet(user_id=USER_ID, app_id=APP_ID)
-
-post_model_outputs_response = stub.PostModelOutputs(
-    service_pb2.PostModelOutputsRequest(
-        user_app_id=userDataObject,  # The userDataObject is created in the overview and is required when using a PAT
-        model_id=MODEL_ID,
-        version_id=MODEL_VERSION_ID,  # This is optional. Defaults to the latest model version
-        inputs=[
-            resources_pb2.Input(
-                data=resources_pb2.Data(
-                    image= resources_pb2.Image(base64=imgb64)
+    post_model_outputs_response = stub.PostModelOutputs(
+        service_pb2.PostModelOutputsRequest(
+            user_app_id=userDataObject,  # The userDataObject is created in the overview and is required when using a PAT
+            model_id=MODEL_ID,
+            version_id=MODEL_VERSION_ID,  # This is optional. Defaults to the latest model version
+            inputs=[
+                resources_pb2.Input(
+                    data=resources_pb2.Data(
+                        image= resources_pb2.Image(base64=img)
+                    )
                 )
-            )
-        ]
-    ),
-    metadata=metadata
-)
-if post_model_outputs_response.status.code != status_code_pb2.SUCCESS:
-    print(post_model_outputs_response.status)
-    raise Exception("Post model outputs failed, status: " + post_model_outputs_response.status.description)
+            ]
+        ),
+        metadata=metadata
+    )
+    if post_model_outputs_response.status.code != status_code_pb2.SUCCESS:
+        print(post_model_outputs_response.status)
+        raise Exception("Post model outputs failed, status: " + post_model_outputs_response.status.description)
 
-# Since we have one input, one output will exist here
-output = post_model_outputs_response.outputs[0]
+    output = post_model_outputs_response.outputs[0]
 
-print("Predicted concepts:")
-for concept in output.data.concepts:
-    print("%s %.2f" % (concept.name, concept.value))
+    print("Predicted concepts:")
+    for concept in output.data.concepts:
+        print("%s %.2f" % (concept.name, concept.value))
 
-# Uncomment this line to print the full Response JSON
-#print(output)
 
+    
+find_ingredients1('uploads/ouiouibaguette.png')

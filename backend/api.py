@@ -1,8 +1,13 @@
+from flask import Flask, jsonify
 import os
 from google.cloud import vision
 from PIL import Image
 from dotenv import load_dotenv
+import requests
+from typing import List
 
+
+from Recipe import Recipe
 
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "backend/key.json"
@@ -48,5 +53,13 @@ def find_ingredients(path):
                 new_ing_names.append(ing.name)
     return new_ing_names
 
+app = Flask(__name__)
+
+@app.route("/get-user/<path>")
+def recipe(imgpath):
+    ingredients = find_ingredients(imgpath)
+    
+    return "Home"
+
 if __name__ == "__main__":
-    find_ingredients("uploads/ouiouibaguette.png")
+    app.run(debug=True)
